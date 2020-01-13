@@ -13,7 +13,7 @@ public class VideoGame extends Produto {
 		super(nome,preco,qtd);
 		this.marca=marca;
 		this.modelo=modelo;
-		this.isUsado=true;
+		
 		
 	}
 	public String getmarca() {
@@ -34,25 +34,17 @@ public class VideoGame extends Produto {
 	public void setUsado(boolean isUsado) {
 		this.isUsado = isUsado;
 	}
-
-
-
-
-
-
-
-
-
 	
 	public Double calculaImposto() {
 		double I=0;
 		if(isUsado==true) {
 			I=preco * 0.25; 
-			System.out.println("Imposto PS4 Slim Usado, R$ "+I);
+			
+			System.out.print("Imposto PS4 Slim Usado, R$ "+I);
 		}else {
 			I=preco * 0.45;
-			System.out.println("Imposto PS4 Slim R$ "+I+"\n");
-			System.out.println("--------------------------------------");
+			System.out.print("Imposto PS4 Slim R$ "+I+"\n");
+			
 		}
 		return I;
 	}
